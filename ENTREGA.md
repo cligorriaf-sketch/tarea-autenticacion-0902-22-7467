@@ -5,7 +5,7 @@
 **Estudiante:** Carlos Fernando Ligorria Flores  
 **Carné:** 0902-22-7467  
 **Curso:** Desarrollo web  
-**Repositorio:** [tarea-autenticacion-0902-22-7467](https://github.com/cligorriaf-sketch/tarea-autenticacion-0902-22-7467) — enlace previsto; falta crear y publicar el repositorio en GitHub.  
+**Repositorio:** [tarea-autenticacion-0902-22-7467](https://github.com/cligorriaf-sketch/tarea-autenticacion-0902-22-7467)  
 **Archivo Word:** `Tarea-Autenticacion-0902-22-7467.docx`  
 **Archivo PDF solicitado por la consigna para Canvas:** `Tarea-Autenticacion-0902-22-7467.pdf` (exportar el DOCX final si Canvas exige PDF).
 
@@ -284,4 +284,4 @@ Este ejercicio evidencia que la autenticación no se resuelve con emitir un JWT:
 
 ### Estado final de las capturas
 
-Las evidencias locales se encuentran en [`01-local/evidence`](./01-local/evidence) y las capturas Auth0 reales en [`02-auth0/evidence`](./02-auth0/evidence). Las pruebas se realizaron en el tenant de laboratorio indicado, no en un tenant de clase. El curso indicado es Desarrollo web. El [repositorio previsto](https://github.com/cligorriaf-sketch/tarea-autenticacion-0902-22-7467) todavía debe crearse y publicarse; el enlace comenzará a funcionar cuando se publique.
+Las evidencias locales se encuentran en [`01-local/evidence`](./01-local/evidence) y las capturas Auth0 reales en [`02-auth0/evidence`](./02-auth0/evidence). Las pruebas se realizaron en el tenant de laboratorio indicado, no en un tenant de clase. El curso indicado es Desarrollo web. El código y los documentos se publicaron en el [repositorio público de GitHub](https://github.com/cligorriaf-sketch/tarea-autenticacion-0902-22-7467).

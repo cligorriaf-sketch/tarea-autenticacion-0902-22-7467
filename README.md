@@ -104,19 +104,6 @@ Pruebe las autorizaciones con [`02-auth0/requests.http`](./02-auth0/requests.htt
 
 ## Documento de entrega
 
-El documento Word [`Tarea-Autenticacion-0902-22-7467.docx`](./Tarea-Autenticacion-0902-22-7467.docx) contiene portada con el curso Desarrollo web, fragmentos, justificaciones, ensayo Passkeys vs. TOTP, referencias APA 7 y capturas locales y Auth0. El [enlace previsto al repositorio](https://github.com/cligorriaf-sketch/tarea-autenticacion-0902-22-7467) también aparece en la portada del DOCX; a la fecha de esta entrega, el repositorio todavía debe crearse y publicarse desde una sesión autenticada de GitHub.
+El documento Word [`Tarea-Autenticacion-0902-22-7467.docx`](./Tarea-Autenticacion-0902-22-7467.docx) contiene portada con el curso Desarrollo web, fragmentos, justificaciones, ensayo Passkeys vs. TOTP, referencias APA 7 y capturas locales y Auth0. El código y los documentos ya están publicados en el [repositorio público de GitHub](https://github.com/cligorriaf-sketch/tarea-autenticacion-0902-22-7467).
 
-Después de crear el repositorio público vacío en GitHub, publícalo desde esta carpeta:
-
-```powershell
-git init
-git branch -M main
-git add .
-git status --short
-git diff --cached --name-only
-git commit -m "Completa entrega de autenticación y RBAC"
-git remote add origin https://github.com/cligorriaf-sketch/tarea-autenticacion-0902-22-7467.git
-git push -u origin main
-```
-
-Antes de confirmar y subir los archivos, verifica que `.env` reales, tokens, contraseñas y secretos no estén incluidos; solo se deben publicar los `.env.example`. La consigna original solicita cargar un PDF a Canvas; si se mantiene ese requisito, exporta el DOCX final como `Tarea-Autenticacion-0902-22-7467.pdf`.
+Antes de agregar nuevos archivos o hacer otro push, verifica que `.env` reales, tokens, contraseñas y secretos no estén incluidos; el `.gitignore` excluye los archivos de entorno locales y solo se publica `.env.example`. La consigna original solicita cargar un PDF a Canvas; si se mantiene ese requisito, exporta el DOCX final como `Tarea-Autenticacion-0902-22-7467.pdf`.
