@@ -1,0 +1,14 @@
+**/node_modules/
+**/dist/
+**/bin/
+**/obj/
+**/*.tsbuildinfo
+**/.env
+**/.env.*
+!**/.env.example
+**/.http-client.env.json
+**/.http-client.private.env.json
+**/.http-local
+**/local-auth.db
+**/local-auth.db-shm
+**/local-auth.db-wal

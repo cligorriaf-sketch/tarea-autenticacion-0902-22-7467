@@ -1,0 +1,45 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #172033;
+  background: #f3f5f8;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+main {
+  max-width: 32rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 1.5rem #14213d18;
+}
+
+form,
+label {
+  display: grid;
+  gap: 0.75rem;
+}
+
+form {
+  gap: 1rem;
+}
+
+input,
+button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.7rem;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.35rem;
+  color: white;
+  background: #2457a7;
+}

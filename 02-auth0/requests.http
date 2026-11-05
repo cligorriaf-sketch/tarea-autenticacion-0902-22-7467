@@ -1,0 +1,18 @@
+@baseUrl = http://localhost:5001
+# Get these access tokens by signing in as the corresponding test user.
+# Never paste a real token into a committed file. Use a private .http-local
+# environment file or a REST client secret-variable store.
+@lectorToken = REPLACE_WITH_READER_ACCESS_TOKEN
+@adminToken = REPLACE_WITH_ADMIN_ACCESS_TOKEN
+
+### Reader can list messages; expected 200
+GET {{baseUrl}}/api/messages
+Authorization: Bearer {{lectorToken}}
+
+### Reader cannot delete, even by bypassing the UI; expected 403
+DELETE {{baseUrl}}/api/messages/1
+Authorization: Bearer {{lectorToken}}
+
+### Administrator can delete; expected 200 with { "deleted": 1 }
+DELETE {{baseUrl}}/api/messages/1
+Authorization: Bearer {{adminToken}}

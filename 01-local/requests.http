@@ -1,0 +1,108 @@
+@baseUrl = http://localhost:5000
+@username = demo
+@password = REPLACE_WITH_LOCAL_DEMO_PASSWORD
+
+### Login creates refresh token A
+# @name loginA
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Login creates another active refresh token B for the same user
+# @name loginB
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Rotate token A; save response as rotateA
+# @name rotateA
+POST {{baseUrl}}/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{loginA.response.body.$.refreshToken}}"
+}
+
+### Replay old token A. Expected: 401 and revocation of active B and A2
+POST {{baseUrl}}/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{loginA.response.body.$.refreshToken}}"
+}
+
+### Logout the active refresh token; expected 200
+POST {{baseUrl}}/api/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "{{rotateA.response.body.$.refreshToken}}"
+}
+
+### Login attempt 1 (execute all six requests within one minute)
+# @name loginAttempt1
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Login attempt 2
+# @name loginAttempt2
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Login attempt 3
+# @name loginAttempt3
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Login attempt 4
+# @name loginAttempt4
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Login attempt 5
+# @name loginAttempt5
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
+
+### Login attempt 6; expected 429 within the same fixed window
+# @name loginAttempt6
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "{{username}}",
+  "password": "{{password}}"
+}
